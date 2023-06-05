@@ -1,0 +1,315 @@
+
+<!DOCTYPE html>
+<html>
+  <head lang="en">
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>YODA website</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.8.0/codemirror.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/image-compare-viewer/dist/image-compare-viewer.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js" type="e157f0faa3d013ba7c0b49ed-text/javascript"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js" type="e157f0faa3d013ba7c0b49ed-text/javascript"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.8.0/codemirror.min.js" type="e157f0faa3d013ba7c0b49ed-text/javascript"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.5.3/clipboard.min.js" type="e157f0faa3d013ba7c0b49ed-text/javascript"></script>
+    <script src="https://unpkg.com/image-compare-viewer/dist/image-compare-viewer.min.js" type="e157f0faa3d013ba7c0b49ed-text/javascript"></script>
+  </head>
+  <body>
+    <div class="container" id="main">
+      <div class="row">
+        <h1 class="col-md-12 text-center">
+          <b>Learn the Force We Can:</b></br>Multi-Object Video Generation from Pixel-Level Interactions</br>
+          <small>
+            <a href="https://araachie.github.io">Aram Davtyan</a>, <a href="https://cvg.unibe.ch/people/favaro">Paolo Favaro</a>
+          </small>
+          <br>
+          <small>
+            University of Bern, Bern, Switzerland
+          </small>
+        </h1>
+      </div>
+    </div>  
+
+    <div class="col-md-6 col-md-offset-3" style="padding-top: 2rem;">
+      <div>
+        <div class="col-md-6 text-center">
+          <h2>
+            <a href="https://www.github.com/araachie/yoda">[GitHub]</a>
+          </h2>
+        </div>
+        <div class="col-md-6 text-center">
+          <h2>
+            <a href="https://www.github.com/araachie/yoda">[Arxiv]</a>
+          </h2>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-6 col-md-offset-3" style="padding-top: 2rem;">
+      <div>
+        <div class="col-md-12 text-center">
+          <img src="media/arch.png" width="100%" alt="" float="left">
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-8 col-md-offset-2" style="padding-top: 2rem;">
+      <div>
+        <h2>Abstract<br>
+          <small>
+            We propose a novel unsupervised method to autoregressively generate videos from a single frame and a sparse motion input. Our trained model can generate realistic object-to-object interactions and separate the dynamics and the extents of multiple objects despite only observing them under correlated motion activities. Key components in our method are the randomized conditioning scheme, the encoding of the input motion control, and the randomized and sparse sampling to break correlations. Our model, which we call YODA, has the ability to move objects without physically touching them. We show both qualitatively and quantitatively that YODA accurately follows the user control, while yielding a video quality that is on par with or better than state-of-the-art video generation prior work on several datasets.
+          </small>
+        </h2>
+      </div>
+    </div>
+
+    <div class="col-md-8 col-md-offset-2" style="padding-top: 2rem;">
+      <div>
+        <h2>Results</h2>
+        <h3>BAIR (different control scenarios)</h3>
+        <div class="col-md-3 text-center">
+          <div>
+            <img src="media/bair/1.gif" width="100%" alt="" float="left">
+          </div>
+        </div>
+        <div class="col-md-3 text-center">
+          <div>
+            <img src="media/bair/2.gif" width="100%" alt="" float="left">
+          </div>
+        </div>
+        <div class="col-md-3 text-center">
+          <div>
+            <img src="media/bair/3.gif" width="100%" alt="" float="left">
+          </div>
+        </div>
+        <div class="col-md-3 text-center">
+          <div>
+            <img src="media/bair/4.gif" width="100%" alt="" float="left">
+          </div>
+        </div>
+        <div class="col-md-3 text-center">
+          <div>
+            <img src="media/bair/5.gif" width="100%" alt="" float="left">
+          </div>
+        </div>
+        <div class="col-md-3 text-center">
+          <div>
+            <img src="media/bair/6.gif" width="100%" alt="" float="left">
+          </div>
+        </div>
+        <div class="col-md-3 text-center">
+          <div>
+            <img src="media/bair/7.gif" width="100%" alt="" float="left">
+          </div>
+        </div>
+        <div class="col-md-3 text-center">
+          <div>
+            <img src="media/bair/8.gif" width="100%" alt="" float="left">
+          </div>
+        </div>
+        <div class="col-md-3 text-center">
+          <div>
+            <img src="media/bair/9.gif" width="100%" alt="" float="left">
+          </div>
+        </div>
+        <div class="col-md-3 text-center">
+          <div>
+            <img src="media/bair/10.gif" width="100%" alt="" float="left">
+          </div>
+        </div>
+        <div class="col-md-3 text-center">
+          <div>
+            <img src="media/bair/11.gif" width="100%" alt="" float="left">
+          </div>
+        </div>
+        <div class="col-md-3 text-center">
+          <div>
+            <img src="media/bair/12.gif" width="100%" alt="" float="left">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-8 col-md-offset-2" style="padding-top: 2rem;">
+      <div>
+        <h3>
+          CLEVRER (samples)<br>
+          <small>
+            Different samples generated by YODA with different controls. 
+            Notice the ability of YODA to predict long-range consequences 
+            of the inputs and to correctly model the physics of the scene. 
+            YODA was designed to make it is possible to intervene into the
+            generation process at any timestamp, which allows giving new
+            impulse to the objects on-fly.
+          </small>
+        </h3>
+      </div>
+    </div>
+    <div class="col-md-8 col-md-offset-2" style="padding-top: 2rem;">
+      <div>
+        <div class="col-md-2 text-center">
+          <div>
+            <img src="media/clevrer/5.gif" width="100%" alt="" float="left">
+          </div>
+        </div>
+        <div class="col-md-2 text-center">
+          <div>
+            <img src="media/clevrer/1.gif" width="100%" alt="" float="left">
+          </div>
+        </div>
+        <div class="col-md-2 text-center">
+          <div>
+            <img src="media/clevrer/2.gif" width="100%" alt="" float="left">
+          </div>
+        </div>
+        <div class="col-md-2 text-center">
+          <div>
+            <img src="media/clevrer/3.gif" width="100%" alt="" float="left">
+          </div>
+        </div>
+        <div class="col-md-2 text-center">
+          <div>
+            <img src="media/clevrer/4.gif" width="100%" alt="" float="left">
+          </div>
+        </div>
+        <div class="col-md-2 text-center">
+          <div>
+            <img src="media/clevrer/6.gif" width="100%" alt="" float="left">
+          </div>
+        </div>
+        <div class="col-md-2 text-center">
+          <div>
+            <img src="media/clevrer/7.gif" width="100%" alt="" float="left">
+          </div>
+        </div>
+        <div class="col-md-2 text-center">
+          <div>
+            <img src="media/clevrer/8.gif" width="100%" alt="" float="left">
+          </div>
+        </div>
+        <div class="col-md-2 text-center">
+          <div>
+            <img src="media/clevrer/9.gif" width="100%" alt="" float="left">
+          </div>
+        </div>
+        <div class="col-md-2 text-center">
+          <div>
+            <img src="media/clevrer/10.gif" width="100%" alt="" float="left">
+          </div>
+        </div>
+        <div class="col-md-2 text-center">
+          <div>
+            <img src="media/clevrer/11.gif" width="100%" alt="" float="left">
+          </div>
+        </div>
+        <div class="col-md-2 text-center">
+          <div>
+            <img src="media/clevrer/12.gif" width="100%" alt="" float="left">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-8 col-md-offset-2" style="padding-top: 2rem;">
+      <div>
+        <h3>iPER (samples)<br>
+          <small>Generated videos on the iPER dataset.</small>
+        </h3>
+      </div>
+    </div>
+    <div class="col-md-6 col-md-offset-3" style="padding-top: 2rem;">
+      <div>
+        <div class="col-md-3 text-center">
+          <div>
+            <img src="media/iper/1.gif" width="100%" alt="" float="left">
+          </div>
+        </div>
+        <div class="col-md-3 text-center">
+          <div>
+            <img src="media/iper/2.gif" width="100%" alt="" float="left">
+          </div>
+        </div>
+        <div class="col-md-3 text-center">
+          <div>
+            <img src="media/iper/3.gif" width="100%" alt="" float="left">
+          </div>
+        </div>
+        <div class="col-md-3 text-center">
+          <div>
+            <img src="media/iper/4.gif" width="100%" alt="" float="left">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-8 col-md-offset-2" style="padding-top: 2rem;">
+      <div>
+        <h3>CLEVRER (controllabilty)<br>
+          <small>Starting from the same frame, we apply different control inputs and observe YODA generate correct responses.</small>
+        </h3>
+      </div>
+    </div>
+    <div class="col-md-6 col-md-offset-3" style="padding-top: 2rem;">
+      <div>
+        <div class="col-md-3 text-center">
+          <div>
+            <img src="media/clevrer/slow.gif" width="100%" alt="" float="left">
+          </div>
+        </div>
+        <div class="col-md-3 text-center">
+          <div>
+            <img src="media/clevrer/fast.gif" width="100%" alt="" float="left">
+          </div>
+        </div>
+        <div class="col-md-3 text-center">
+          <div>
+            <img src="media/clevrer/other.gif" width="100%" alt="" float="left">
+          </div>
+        </div>
+        <div class="col-md-3 text-center">
+          <div>
+            <img src="media/clevrer/together.gif" width="100%" alt="" float="left">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-8 col-md-offset-2" style="padding-top: 2rem;">
+      <div>
+        <h3>Demo<br>
+          <small>
+            To ease the access to our model, we have designed a inteactive demo that will be released with the code. 
+            Given a frame from the dataset, the user can manipulate the objects by drawing arrows at certain locations.
+            YODA will then generate the next frame by taking into account the user-input and the previously generated frames.
+          </small>
+        </h3>
+      </div>
+    </div>
+    <div class="col-md-6 col-md-offset-3" style="padding-top: 2rem;">
+      <div>
+        <div class="col-md-12 text-center">
+          <div>
+            <video width=100% autoplay muted loop>
+              <source src="media/demo/demo.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-8 col-md-offset-2">
+        <h3>
+        Acknowledgements
+        </h3>
+        <p class="text-justify">
+        The website template was borrowed from <a href="https://kfmei.page/vidm/">VIDM</a>.
+        </p>
+      </div>
+    </div>
+
+  </body>
+</html>

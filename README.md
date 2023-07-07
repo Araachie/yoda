@@ -9,7 +9,7 @@
   </p>
 <h4 align="center">Official repository of the paper</h4>
 
-<h4 align="center"><a href="https://araachie.github.io/yoda/">Project Website</a> • <a href="https://arxiv.org/abs/00000000">Arxiv</a>
+<h4 align="center"><a href="https://araachie.github.io/yoda/">Project Website</a> • <a href="https://arxiv.org/abs/2306.03988">Arxiv</a>
 
 #
 > **Abstract:** *We propose a novel unsupervised method to autoregressively generate videos

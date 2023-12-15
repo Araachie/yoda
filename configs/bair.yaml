@@ -1,0 +1,81 @@
+# Experiment name
+name: "bair_256"
+
+# Dataset parameters
+data:
+  data_root: # path to the dataset folder
+  input_size: 256
+  crop_size: 256
+  frames_per_sample: 16
+  skip_frames: 0
+  random_horizontal_flip: False
+  random_time_reverse: False
+  aug: False
+  albumentations: True
+  with_flows: False
+
+# Parameters of the model
+model:
+  # Defines the sigma min
+  sigma: 0.0000001
+  # Probability of skipping conditions
+  skip_prob: 0.5
+
+  # Parameters for vector field regressor
+  vector_field_regressor:
+    state_size: 8
+    state_res: [16, 16]
+    action_state_size: 256
+    inner_dim: 768
+    depth: 4
+    mid_depth: 5
+
+  # Parameters for the autoencoder
+  autoencoder:
+    # The architecture of the autoencoder [ours, ldm-vq, ldm-kl]
+    type: "ldm-vq"
+    config: "f16"
+    ckpt_path: # path to the checkpoint
+
+  # Parameters of the flow network
+  flow_network:
+    scale: 2.0
+
+  # Parameters of the sparsification network
+  sparsification_network:
+    num_samples: 5
+    tau: 100
+    threshold: 0.0001
+
+  # Parameters of the representation network
+  flow_representation_network:
+    in_channels: 3
+    out_channels: 256
+    tile_size: [ 16, 16 ]
+    out_res: [ 16, 16 ]
+    depth: 4
+
+
+# Parameters for the training
+training:
+  # Parameters for batch building
+  batching:
+    batch_size: 16
+    num_workers: 7
+
+  # Parameters for the optimizer
+  optimizer:
+    learning_rate: 0.0001
+    weight_decay: 0.000005
+
+    num_warmup_steps: 5000
+    num_training_steps: 300000
+
+  # Number of observations in the sequence
+  num_observations: 16
+  # Nuber of frames to generate
+  frames_to_generate: 15
+
+  # Parameters for loss weighting
+  loss_weights:
+    flow_matching_loss: 1.0

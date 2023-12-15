@@ -14,9 +14,9 @@
 <h4 align="center"><a href="https://araachie.github.io/yoda/">Website</a> • <a href="https://arxiv.org/abs/2306.03988">Arxiv</a>
 
 <p float="left">
-  <img src="media/robot_n5.gif" width="33%" />
-  <img src="media/zebra_n5.gif" width="33%" />
-  <img src="media/zebra_back_n5.gif" width="33%" />
+  <img src="media/robot_n5.gif" width="30%" />
+  <img src="media/zebra_n5.gif" width="30%" />
+  <img src="media/zebra_back_n5.gif" width="30%" />
 </p>
 
 #

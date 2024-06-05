@@ -85,4 +85,4 @@ if __name__ == "__main__":
             extension=args.extension,
             with_flows=args.with_flows,
             image_size=args.image_size,
-            out_dir=os.path.join(args.out_dir, 'train'))
+            out_dir=os.path.join(args.out_dir, split))

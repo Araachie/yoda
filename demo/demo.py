@@ -18,14 +18,22 @@ from functools import partial
 def load_model(dataset_name: str):
     config_path = f"configs/{dataset_name}.yaml"
     dst = f"model_weights/{dataset_name}/model.pth"
+    dst_ae = f"model_weights/{dataset_name}/ae"
+    dst_ae += ".pth" if dataset_name.startswith("clevrer") else ".ckpt"
 
     im_res = 256 if dataset_name == "bair" else 128
     model_url = f"https://huggingface.co/cvg-unibe/yoda_{dataset_name}_{im_res}/resolve/main/model.pth"
+    ae_url = f"https://huggingface.co/cvg-unibe/yoda_{dataset_name}_{im_res}/resolve/main/vqvae"
+    ae_url += ".pth" if dataset_name.startswith("clevrer") else ".ckpt"
 
     os.makedirs(os.path.dirname(dst), exist_ok=True)
-    wget.download(model_url, out=dst)
+    if not os.path.exists(dst):
+        wget.download(model_url, out=dst)
+    if not os.path.exists(dst_ae):
+        wget.download(ae_url, out=dst_ae)
 
     config = Configuration(config_path)
+    config["model"]["autoencoder"]["ckpt_path"] = dst_ae
     model = Model(config["model"])
     model.load_from_ckpt(dst)
     model.eval()

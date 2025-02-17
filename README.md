@@ -20,38 +20,34 @@
 </p>
 
 #
-> **Abstract:** *We propose a novel unsupervised method to autoregressively
-> generate videos from a single frame and a sparse motion input.
-> Our trained model can generate unseen realistic object-to-
-> object interactions. Although our model has never been
-> given the explicit segmentation and motion of each object in
-> the scene during training, it is able to implicitly separate their
-> dynamics and extents. Key components in our method are the
-> randomized conditioning scheme, the encoding of the input
-> motion control, and the randomized and sparse sampling to
-> enable generalization to out of distribution but realistic correlations.
-> Our model, which we call YODA, has therefore
-> the ability to move objects without physically touching them.
-> Through extensive qualitative and quantitative evaluations on
-> several datasets, we show that YODA is on par with or better
-> than state of the art video generation prior work in terms of
-> both controllability and video quality.*
+> **Abstract:** *We propose a novel unsupervised method to autoregressively generate
+> videos from a single frame and a sparse motion input. Our trained model can generate
+> unseen realistic object-to-object interactions. Although our model has never been given
+> the explicit segmentation and motion of each object in the scene during training, it is
+> able to implicitly separate their dynamics and extents. Key components in our method are the
+> randomized conditioning scheme, the encoding of the input motion control, and the randomized
+> and sparse sampling to enable generalization to out of distribution but realistic correlations.
+> Our model, which we call YODA, has therefore the ability to move objects without physically
+> touching them. Through extensive qualitative and quantitative evaluations on several datasets,
+> we show that YODA is on par with or better than state of the art video generation prior work
+> in terms of both controllability and video quality.*
 
 ## Citation
 
-The paper is to appear in the Proceeding of the 38th AAAI Conference in Artificial Intelligence.
-In the meantime, we recommend using the following bibref to the arxiv preprint.
-
-A. Davtyan, P. Favaro. Learn the Force We Can: Multi-Object Video Generation from Pixel-Level Interactions. arXiv preprint, 2023.
+Davtyan, A., & Favaro, P. (2024). Learn the Force We Can: Enabling Sparse Motion Control in Multi-Object Video Generation. Proceedings of the AAAI Conference on Artificial Intelligence, 38(10), 11722-11730. https://doi.org/10.1609/aaai.v38i10.29056
 
 ```
-@misc{davtyan2023learn,
-      title={Learn the Force We Can: Multi-Object Video Generation from Pixel-Level Interactions}, 
-      author={Aram Davtyan and Paolo Favaro},
-      year={2023},
-      eprint={2306.03988},
-      archivePrefix={arXiv},
-      primaryClass={cs.CV}
+@article{Davtyan_Favaro_2024,
+	title={Learn the Force We Can: Enabling Sparse Motion Control in Multi-Object Video Generation},
+	volume={38},
+	url={https://ojs.aaai.org/index.php/AAAI/article/view/29056},
+	DOI={10.1609/aaai.v38i10.29056},
+	number={10},
+	journal={Proceedings of the AAAI Conference on Artificial Intelligence},
+	author={Davtyan, Aram and Favaro, Paolo},
+	year={2024},
+	month={Mar.},
+	pages={11722-11730}
 }
 ```
 
